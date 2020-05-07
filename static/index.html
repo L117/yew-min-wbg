@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Minimal Yew WASM-bindgen example</title>
+</head>
+
+<body>
+    <script type=module>
+        import init from '/wasm/yew_min_wbg.js';
+        async function run() { await init(); }
+        run();
+    </script>
+</body>
+
+</html>
