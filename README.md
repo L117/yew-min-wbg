@@ -34,7 +34,7 @@ This repository shows how to create minimal [Yew][yew] web application with bare
 ## Building
 
 First and foremost, to get started with this example, you will need to add nightly toolchain and `wasm32-unknown-unknown` target support via [rustup]. Example itself **does not require nightly**. Do this in your terminal of choice:
-```
+```sh
 rustup toolchain add nightly
 rustup target add wasm32-unknown-unknown
 ```
@@ -52,7 +52,7 @@ cargo install just watchexec wasm-bindgen-cli
 cargo +nightly install miniserve
 ```
 Now you're all set and ready to roll! Run this in your terminal, wait for completion and head to http://localhost:8000
-```
+```sh
 just watch
 ```
 
@@ -63,7 +63,7 @@ just watch
 - `just clean` - destroys `target` and `dist` directories.
 - `just build` - (re)builds project, without cleaning.
 - `just serve` - serves files from `dist` directory.
-- `justwatch` - rebuilds project on changes an invokes `serve`.
+- `just watch` - rebuilds project on changes an invokes `serve`.
 
 It also makes sense to combine some of these. And it's certainly possible to add your own custom recipes!
 
