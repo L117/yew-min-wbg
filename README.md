@@ -6,6 +6,7 @@ Yew Min WASM Bindgen Boilerplate <3
 [wasm-bindgen-cli]: https://crates.io/crates/wasm-bindgen-cli
 [watchexec]: https://crates.io/crates/watchexec
 [miniserve]: https://crates.io/crates/miniserve
+[simple-http-server]: https://crates.io/crates/simple-http-server
 [rustup]: https://rustup.rs/
 [just]: https://crates.io/crates/just
 [yew-wasm-pack-template]: https://github.com/yewstack/yew-wasm-pack-template
@@ -33,23 +34,21 @@ This repository shows how to create minimal [Yew][yew] web application with bare
 
 ## Building
 
-First and foremost, to get started with this example, you will need to add nightly toolchain and `wasm32-unknown-unknown` target support via [rustup]. Example itself **does not require nightly**. Do this in your terminal of choice:
+First and foremost, to get started with this example, you will need to add `wasm32-unknown-unknown` target support via [rustup]. Do this in your terminal of choice:
 ```sh
-rustup toolchain add nightly
 rustup target add wasm32-unknown-unknown
 ```
 
 This example also uses some handy tools to make your life easier:
 
 - [just] - `make`-inspired task-runner, does routine job for you.
-- [miniserve] - static-only HTTP server, delivers content to your browser.
+- [simple-http-server] - static-only HTTP server, delivers content to your browser.
 - [watchexec] - combination of `watch` and `exec`, triggers automatic rebuilds on file changes.
 - [wasm-bindgen-cli] - generates most of JS glue to let this app interact with DOM.
 
 To install all of these do this in your terminal:
 ```sh
-cargo install just watchexec wasm-bindgen-cli
-cargo +nightly install miniserve
+cargo install just watchexec wasm-bindgen-cli simple-http-server
 ```
 Now you're all set and ready to roll! Run this in your terminal, wait for completion and head to http://localhost:8000
 ```sh

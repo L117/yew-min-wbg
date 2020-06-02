@@ -14,7 +14,7 @@ clean:
     rm -rf "dist" "target"
 
 serve: build
-    miniserve -p 8000 "dist"
+    simple-http-server --index --nocache --try-file "dist/index.html" -p 8000 "dist"
 
 watch:
     watchexec -c -n -i dist -i target -e html,js,rs,css,scss -r just serve
